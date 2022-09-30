@@ -17,6 +17,7 @@ namespace CIS341_lab3.Pages
         public IActionResult OnPost()
         {
             Debug.WriteLine($"{Name} ({Email}): {Message}");
+            Console.WriteLine($"{Name} ({Email}): {Message}");
             return RedirectToPage("Index");
         }
     }
