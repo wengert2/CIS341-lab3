@@ -1,11 +1,24 @@
 ﻿@page
-@model CIS341_lab3.Pages.ContactModel
+@using CIS341_lab3.Pages
+@model ContactModel
 @{
 }
-<p>Get in touch with us</p>
-<form asp-controller="Contact">
-    <input type="text" name="name"/>
-    <input type="text" name="email"/>
-    <input type="text" name="message"/>
-    <button type="submit">Submit</button>
-</form>
+<h1>Contact us</h1>
+
+<div>
+    <form method="POST" asp-action="Contact">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"></label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input type="email" asp-for="Email" class="form-control" />
+    </div>
+    <div class="mb-3">
+        <label asp-for="Message" class="form-label"></label>
+        <input asp-for="Message" class="form-control" />
+    </div>
+    <div><input class="btn btn-primary" type="submit" value="Submit"></div>
+    </form>
+</div>
