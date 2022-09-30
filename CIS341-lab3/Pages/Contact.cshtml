@@ -2,5 +2,10 @@
 @model CIS341_lab3.Pages.ContactModel
 @{
 }
-
-<form>Test</form>
+<p>Get in touch with us</p>
+<form asp-controller="Contact">
+    <input type="text" name="name"/>
+    <input type="text" name="email"/>
+    <input type="text" name="message"/>
+    <button type="submit">Submit</button>
+</form>
