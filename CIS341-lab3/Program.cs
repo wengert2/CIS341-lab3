@@ -25,7 +25,8 @@ app.Use(async (context, next) =>
     // The delegate should appropriately pass the request to the next delegate.
     await next.Invoke();
     string url = context.Request.Scheme + "://" + context.Request.Host + context.Request.Path + context.Request.QueryString;
-    Debug.WriteLine($"{DateTime.Now} {url}");
+    Debug.WriteLine($"Request Time: {DateTime.Now} \n Request URL:{url}");
+    Console.WriteLine($"Request Time: {DateTime.Now} \n Request URL:{url}");
 });
 
 app.UseHttpsRedirection();
